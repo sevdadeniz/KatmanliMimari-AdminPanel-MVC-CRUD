@@ -16,6 +16,10 @@ namespace BusinessLayer.Concrete
         IStudentDAL studentdal;
         Student student;
 
+        public StudentMan()
+        {
+        }
+
         public StudentMan(IStudentDAL studentdal)
         {
             this.studentdal = studentdal;

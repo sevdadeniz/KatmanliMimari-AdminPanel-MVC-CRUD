@@ -1,3 +1,7 @@
+using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccess.Abstract;
+using DataAccess.Concrete.Repositories;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -24,6 +28,10 @@ namespace PresentLayer
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+            services.AddScoped<IStudentService, StudentMan>();
+            services.AddScoped<IStudentDAL, StudentDAL>();
+            services.AddScoped<ITeacherSevice, TeacherMan>();
+            services.AddScoped<ITeacherDAL, TeacherDAL>();
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
