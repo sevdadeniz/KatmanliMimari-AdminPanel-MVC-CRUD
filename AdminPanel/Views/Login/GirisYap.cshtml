@@ -1,0 +1,32 @@
+﻿@{
+    Layout = null;
+}
+@using EntityLayer
+@model EntityLayer.User
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sayfa Başlığı</title>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    <div class="loginBox">
+        <img class="user" src="https://i.ibb.co/yVGxFPR/2.png" height="100px" width="100px">
+        <h3>Sign in here</h3>
+        <form asp-action="GirisYap" asp-controller="Login" method="post" class="pt-3">
+            <div class="inputBox">
+                <input asp-for="@Model.UserName" type="text" name="UserName" placeholder="Username">
+                <input asp-for="@Model.Password" type="password" class="form-control" id="Password" placeholder="Şifreniz..." required>
+            </div>
+            <input type="submit" name="" value="Login">
+        </form>
+        <a href="#">Forget Password<br> </a>
+        <div class="text-center">
+            <p style="color: #59238F;">Sign-Up</p>
+        </div>
+
+    </div>
+</body>
+</html>

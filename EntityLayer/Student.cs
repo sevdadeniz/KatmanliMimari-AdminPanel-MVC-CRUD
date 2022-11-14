@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace EntityLayer
+{
+    public class Student
+    {
+        [Key]
+        public int StudentID { get; set; }
+        [StringLength(20)]
+        public string SName { get; set; }
+        [StringLength(20)]
+        public string SSurname { get; set; }
+
+    }
+}
